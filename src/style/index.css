@@ -1,14 +1,6 @@
 * {
-  padding: 0;
   margin: 0;
-}
-
-:root {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  text-align: start;
 }
 
 body {
@@ -33,7 +25,18 @@ p {
   padding: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+label {
+  display: block;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  text-align: center;
+  margin: 0.8em 0;
 }
