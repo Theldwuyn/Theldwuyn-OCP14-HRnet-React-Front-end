@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { addEmployee } from './createEmployeeFormSlice.js';
 import { states } from '../../data/states.js';
 import { departments } from '../../data/department.js';
-import Modal from '../../../modale/modal.jsx';
+import Modal from '@guillaume.a/modal_react';
 
 // style
 import 'react-datepicker/dist/react-datepicker.css';
