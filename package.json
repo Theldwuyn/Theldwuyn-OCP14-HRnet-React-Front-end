@@ -12,18 +12,18 @@
     "coverage": "vitest run --coverage"
   },
   "dependencies": {
-    "@guillaume.a/modal_react": "^1.1.0",
+    "@guillaume.a/modal_react": "^1.2.0",
     "@reduxjs/toolkit": "^2.5.1",
-    "datatables.net-dt": "^2.2.1",
-    "datatables.net-react": "^1.0.0",
     "prettier": "^3.4.2",
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
+    "react-data-table-component": "^7.6.2",
     "react-datepicker": "^8.0.0",
     "react-dom": "^18.3.1",
     "react-redux": "^9.2.0",
     "react-router": "^7.1.5",
-    "react-select": "^5.10.0"
+    "react-select": "^5.10.0",
+    "styled-components": "^6.1.14"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
