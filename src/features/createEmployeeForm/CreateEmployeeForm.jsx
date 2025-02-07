@@ -23,14 +23,13 @@ function CreateEmployeeForm() {
     const employee = {
       firstName: e.currentTarget.firstName.value.trim(),
       lastName: e.currentTarget.lastName.value.trim(),
-      birthDate: birthDate,
-      startDate: startDate,
-      address: {
-        street: e.currentTarget.street.value.trim(),
-        city: e.currentTarget.city.value.trim(),
-        state: e.currentTarget.states.value,
-        zipCode: e.currentTarget.zipCode.value,
-      },
+      // serializing date to string object
+      birthDate: birthDate.toLocaleDateString(),
+      startDate: startDate.toLocaleDateString(),
+      street: e.currentTarget.street.value.trim(),
+      city: e.currentTarget.city.value.trim(),
+      state: e.currentTarget.states.value,
+      zipCode: e.currentTarget.zipCode.value,
       department: e.currentTarget.departments.value,
     };
     dispatch(addEmployee(employee));
