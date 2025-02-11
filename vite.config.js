@@ -11,14 +11,24 @@ export default defineConfig({
     reporters: ['verbose'],
     watch: false,
     coverage: {
-      reporter: ['text', 'json', 'html'],
-      exclude: ['./src/main.jsx', '__test__/**', ...configDefaults.exclude],
+      reporter: ['text', 'json'],
+      exclude: [
+        './src/main.jsx',
+        '__test__/**',
+        './src/data',
+        './src/app/**',
+        './src/router',
+        ...configDefaults.exclude,
+      ],
     },
     exclude: [
       ...configDefaults.exclude,
+      './src/data',
       './src/main.jsx',
       '**/node_modules/**',
       './coverage/**',
+      './src/app/**',
+      './src/router',
     ],
   },
 });
