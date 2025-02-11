@@ -69,7 +69,6 @@ const columns = [
 function EmployeeListTable() {
   const [filterText, setFilterText] = useState('');
   const tableData = useSelector((state) => state.employeeList);
-  console.log('data', tableData);
 
   const filteredData = tableData.filter((item) =>
     Object.values(item).some((value) =>
@@ -86,20 +85,6 @@ function EmployeeListTable() {
     );
   }, [filterText]);
 
-  function handleSort(selectedColumn) {
-    if (selectedColumn.name) {
-      columns.forEach(
-        (col) => (col.style = { backgroundColor: 'transparent' }),
-      );
-      const activeColumn = columns.find(
-        (col) => col.name === selectedColumn.name,
-      );
-      activeColumn.style = { backgroundColor: 'grey' };
-      console.log('active', activeColumn);
-    }
-    console.log('selected', selectedColumn);
-  }
-
   return (
     <DataTable
       columns={columns}
@@ -108,7 +93,6 @@ function EmployeeListTable() {
       subHeader
       subHeaderComponent={subHeaderComponentMemo}
       persistTableHead
-      onSort={(selectedColumn) => handleSort(selectedColumn)}
     />
   );
 }
