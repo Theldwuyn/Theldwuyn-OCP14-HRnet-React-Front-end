@@ -21,16 +21,16 @@ function CreateEmployeeForm() {
   function handleSubmit(e) {
     e.preventDefault();
     const employee = {
-      firstName: e.currentTarget.firstName.value.trim(),
-      lastName: e.currentTarget.lastName.value.trim(),
+      firstName: e.currentTarget.firstName?.value.trim(),
+      lastName: e.currentTarget.lastName?.value.trim(),
       // serializing date to string object
       birthDate: birthDate.toLocaleDateString(),
       startDate: startDate.toLocaleDateString(),
-      street: e.currentTarget.street.value.trim(),
-      city: e.currentTarget.city.value.trim(),
-      state: e.currentTarget.states.value,
-      zipCode: e.currentTarget.zipCode.value,
-      department: e.currentTarget.departments.value,
+      street: e.currentTarget.street?.value.trim(),
+      city: e.currentTarget.city?.value.trim(),
+      state: e.currentTarget.states?.value,
+      zipCode: e.currentTarget.zipCode?.value,
+      department: e.currentTarget.departments?.value,
     };
     dispatch(addEmployee(employee));
   }
@@ -91,7 +91,7 @@ function CreateEmployeeForm() {
           ))}
         </select>
 
-        <button type="submit" ref={buttonOpenModal}>
+        <button type="submit" ref={buttonOpenModal} data-testid="subButton">
           Save
         </button>
       </form>
