@@ -13,12 +13,12 @@ export default defineConfig({
     coverage: {
       reporter: ['text', 'json'],
       exclude: [
+        ...configDefaults.exclude,
         './src/main.jsx',
         '__test__/**',
         './src/data',
         './src/app/**',
         './src/router',
-        ...configDefaults.exclude,
       ],
     },
     exclude: [
